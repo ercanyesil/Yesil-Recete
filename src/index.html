@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/blobz.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="/Ogrenciler/ercanyesil/homeworks/03-blogPage/src/asset/favicon.svg"/>
+    <title>Yeşil Reçete</title>
+  </head>
+  <body>
+    <div class="container-fluid background">
+      
+      <div class="container-fluid">
+        <div class="row box">
+     
+          <div class="col-3 p-0">
+
+          <div class="tk-blob" style="--time: 20s; --amount: 5; --fill: white;">
+            <button
+            class="btn border-light rounded-1 m-5 add-plus"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasOptions"
+            aria-controls="offcanvasOptions"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-plus-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+            Reçete Ekle
+          </button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747.2 726.7">
+              <path d="M539.8 137.6c98.3 69 183.5 124 203 198.4 19.3 74.4-27.1 168.2-93.8 245-66.8 76.8-153.8 136.6-254.2 144.9-100.6 8.2-214.7-35.1-292.7-122.5S-18.1 384.1 7.4 259.8C33 135.6 126.3 19 228.5 2.2c102.1-16.8 213.2 66.3 311.3 135.4z"></path>
+            </svg>
+          </div>
+          
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvasOptions"
+            aria-labelledby="offcanvas"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvas">
+                Yesil reçete ekle
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="container my-5">
+                <div class="card-body">
+                  <form id="blogForm" name="form">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <div class="form-check  d-flex justify-content-start mx-2 my-4">
+                          <input class="form-check-input" type="checkbox" id="myCheck" onclick="myFunction()">                 
+                          <label class="mx-3">Tamamlandı olarak işaretleyebilirsiniz</label>
+                        </div> 
+                        <div class="input-group mb-3">
+                          <select class="form-select" id="category">
+                            <option selected>Tüm Kategoriler</option>
+                            <option value="Sorumluluklar">Sorumluluklar</option>
+                            <option value="Yurt Dışı Seyahatler">Yurt Dışı Seyahatler</option>
+                            <option value="Yurt İçi Seyahatler">Yurt İçi Seyahatler</option>
+                            <option value="Ölmeden Önce Yapılacak Aktiviteler Listesi">Ölmeden Önce Yapılacak Aktiviteler Listesi</option>
+                            <option value="Kariyer Planlamaları">Kariyer Planlamaları</option>
+                            <option value="Ev İçi Aktiviteler">Ev İçi Aktiviteler</option>
+                            <option value="Film Listesi">Film Listesi</option>
+                            <option value="Dizi Listesi">Dizi Listesi</option>
+                            <option value="Kitap Listesi">Kitap Listesi</option>
+                            <option value="Müzik Listesi">Müzik Listesi</option>
+                            <option value="Kamp Listesi">Kamp Listesi</option>
+                            <option value="Outdoor Aktiviteler">Outdoor Aktiviteler</option>
+                            <option value="Bütçe & Ekonomi">Bütçe & Ekonomi</option>
+                            <option value="Spor">Spor</option>
+                            <option value="Yiyecek Listesi">Yiyecek Listesi</option>
+                            <option value="Restaurantlar">Restaurantlar</option>
+                            <option value="Mekanlar">Mekanlar</option>
+                            <option value="Tarifler">Tarifler</option>
+                            <option value="Araştırmalar">Araştırmalar</option>
+                            <option value="Giysi & Kıyafet">Giysi & Kıyafet</option>
+                            <option value="Sağlık & Bakım">Sağlık & Bakım</option>
+                            <option value="Dini Yapılacaklar Listesi">Dini Yapılacaklar Listesi</option>
+                            <option value="Ev Eşyaları">Ev Eşyaları</option>
+                            <option value="Hayaller">Hayaller</option>
+                            <option value="Kişisel Hedefler">Kişisel Hedefler</option>
+                            <option value="Psikoloji">Psikoloji</option>
+                            <option value="Web Siteleri & Bloglar">Web Siteleri & Bloglar</option>
+                            <option value="Özel 1">Özel 1</option>
+                            <option value="Özel 2">Özel 2</option>
+                            <option value="Özel 3">Özel 3</option>
+                          </select>
+                        </div>
+                        <input
+                          class="form-control my-3"
+                          type="text"
+                          name="name"
+                          id="name"
+                          placeholder="İkinci alt kategori ismini giriniz"
+                        />
+                        <input
+                          class="form-control my-3"
+                          type="text"
+                          name="nick"
+                          id="nick"
+                          placeholder="Üçüncü alt kategori ismini giriniz"
+                        />
+                        <textarea
+                          class="form-control my-3 content"
+                          type="text"
+                          name="content"
+                          id="content"
+                          placeholder="İçerik giriniz">
+                        </textarea> 
+                        <input
+                          class="form-control my-3"
+                          type="text"
+                          name="price"
+                          id="price"
+                          placeholder="Detay girin"
+                        />
+                        <input
+                          class="form-control my-3"
+                          type="url"
+                          name="image-url"
+                          id="image-url"
+                          placeholder="Url ekle"
+                        />
+                        <input
+                          class="form-control my-3"
+                          type="text"
+                          name="author"
+                          id="author"
+                          placeholder="Yazar ekleyin"
+                        />                                            
+                        <input
+                          class="form-control my-3"
+                          type="date"
+                          name="date"
+                          id="date"
+                          placeholder="Tarih ekle"
+                        />       
+                      </div>
+                    </div>
+                    <button
+                      id="blog-add"
+                      type="button"
+                      class="btn text-light btn-dark mt-3"
+                    >
+                      Ekle
+                    </button>
+                  </form>
+                  <button 
+                    type="button" 
+                    class="btn btn-warning mt-3" 
+                    id="blogEdit"
+                  >
+                    Değişiklikleri Kaydet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <h2 class="d-flex justify-content-center text-light my-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-heart" viewBox="0 0 16 16">
+            <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982Z"/>
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+          </svg>
+          Yeşil Reçete
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+          </svg>
+        </h2>
+      </div>
+
+      
+  
+      <div class="container">
+
+        <div class="row">
+           
+          <div class="col">
+            <div class="input-group mb-3 categories">
+              <select class="form-select" id="filterCategory">
+                <option value="Seciniz" selected>Tüm Kategoriler</option>
+                <option value="Sorumluluklar">Sorumluluklar</option>
+                <option value="Yurt Dışı Seyahatler">Yurt Dışı Seyahatler</option>
+                <option value="Yurt İçi Seyahatler">Yurt İçi Seyahatler</option>
+                <option value="Ölmeden Önce Yapılacak Aktiviteler Listesi">Ölmeden Önce Yapılacak Aktiviteler Listesi</option>
+                <option value="Kariyer Planlamaları">Kariyer Planlamaları</option>
+                <option value="Ev İçi Aktiviteler">Ev İçi Aktiviteler</option>
+                <option value="Film Listesi">Film Listesi</option>
+                <option value="Dizi Listesi">Dizi Listesi</option>
+                <option value="Kitap Listesi">Kitap Listesi</option>
+                <option value="Müzik Listesi">Müzik Listesi</option>
+                <option value="Kamp Listesi">Kamp Listesi</option>
+                <option value="Outdoor Aktiviteler">Outdoor Aktiviteler</option>
+                <option value="Bütçe & Ekonomi">Bütçe & Ekonomi</option>
+                <option value="Spor">Spor</option>
+                <option value="Yiyecek Listesi">Yiyecek Listesi</option>
+                <option value="Restaurantlar">Restaurantlar</option>
+                <option value="Mekanlar">Mekanlar</option>
+                <option value="Tarifler">Tarifler</option>
+                <option value="Araştırmalar">Araştırmalar</option>
+                <option value="Giysi & Kıyafet">Giysi & Kıyafet</option>
+                <option value="Sağlık & Bakım">Sağlık & Bakım</option>
+                <option value="Dini Yapılacaklar Listesi">Dini Yapılacaklar Listesi</option>
+                <option value="Ev Eşyaları">Ev Eşyaları</option>
+                <option value="Hayaller">Hayaller</option>
+                <option value="Kişisel Hedefler">Kişisel Hedefler</option>
+                <option value="Psikoloji">Psikoloji</option>
+                <option value="Web Siteleri & Bloglar">Web Siteleri & Bloglar</option>
+                <option value="Özel 1">Özel 1</option>
+                <option value="Özel 2">Özel 2</option>
+                <option value="Özel 3">Özel 3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col">
+            <form class="d-flex justify-content-end" role="search">
+              <input
+                class="form-control me-2 search-web"
+                id="searchTerm"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-search text-light"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+              </button>
+              </form>
+          </div>          
+          <div id="status"></div>
+        </div>
+
+        <div id="ui" class="row">
+          
+      
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

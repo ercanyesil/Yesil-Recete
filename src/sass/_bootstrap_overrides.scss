@@ -1,0 +1,26 @@
+$primary: rgba(48,69,94,255);
+$info: rgba(63,193,201,255);
+$success: rgba(45, 31, 235, 0.945);
+@mixin h($heading,$font){
+    @if($heading==1){
+      h1{font-size: $font + px;}
+    }@else if($heading==2){
+      h2{font-size: $font + px;}
+    }@else if($heading==3){
+      h3{font-size: $font + px;}
+    }@else if($heading==4){
+      h4{font-size: $font + px;}
+    }@else if($heading==5){
+      h5{font-size: $font + px;}
+    }@else if($heading==6){
+      h6{font-size: $font + px;}
+    }
+}
+body{
+    @include h(1,100);
+    @include h(2,50);
+    @include h(3,40);
+    @include h(4,30);
+    @include h(5,20);
+    @include h(6,10);
+}
